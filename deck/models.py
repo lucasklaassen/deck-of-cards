@@ -39,7 +39,7 @@ class Deck(models.Model):
     piles = JSONField(null=True, blank=True)
     deck_contents = JSONField(null=True, blank=True)
     shuffled = models.BooleanField(default=False)
-    
+
     def open_new(self, cards_used=None):
         stack = []
         if cards_used is None:  # use a subset of a standard deck
@@ -70,15 +70,15 @@ def card_to_dict(card):
     code = value + suit
     card_dict = {
         'code': code,
-        'image': 'http://deckofcardsapi.com/static/img/%s.png' % code,
+        'image': 'https://deck-of-cards.goldstar.party/static/img/%s.png' % code,
         'images': {
-            'svg': 'http://deckofcardsapi.com/static/img/%s.svg' % code,
-            'png': 'http://deckofcardsapi.com/static/img/%s.png' % code
+            'svg': 'https://deck-of-cards.goldstar.party/static/img/%s.svg' % code,
+            'png': 'https://deck-of-cards.goldstar.party/static/img/%s.png' % code
         }
     }
 
     if code == 'AD':
-        card_dict['image'] = 'http://deckofcardsapi.com/static/img/aceDiamonds.png'
+        card_dict['image'] = 'https://deck-of-cards.goldstar.party/static/img/aceDiamonds.png'
 
     card_dict['value'] = VALUES.get(value) or value
     card_dict['suit'] = SUITS.get(suit) or suit
