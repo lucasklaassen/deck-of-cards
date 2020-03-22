@@ -70,15 +70,15 @@ def card_to_dict(card):
     code = value + suit
     card_dict = {
         'code': code,
-        'image': 'https://deck-of-cards.goldstar.party/static/img/%s.png' % code,
+        'image': 'https://deck-of-cards.breadsticks.org/static/img/%s.png' % code,
         'images': {
-            'svg': 'https://deck-of-cards.goldstar.party/static/img/%s.svg' % code,
-            'png': 'https://deck-of-cards.goldstar.party/static/img/%s.png' % code
+            'svg': 'https://deck-of-cards.breadsticks.org/static/img/%s.svg' % code,
+            'png': 'https://deck-of-cards.breadsticks.org/static/img/%s.png' % code
         }
     }
 
     if code == 'AD':
-        card_dict['image'] = 'https://deck-of-cards.goldstar.party/static/img/aceDiamonds.png'
+        card_dict['image'] = 'https://deck-of-cards.breadsticks.org/static/img/aceDiamonds.png'
 
     card_dict['value'] = VALUES.get(value) or value
     card_dict['suit'] = SUITS.get(suit) or suit

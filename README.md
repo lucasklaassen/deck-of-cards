@@ -1,12 +1,12 @@
 # deckofcards
+
 An API to simulate a deck of cards
 
-The docs are on https://deck-of-cards.goldstar.party
+The docs are on https://deck-of-cards.breadsticks.org
 
 Feel free to fork and do whatever you want with the project, it's all under the MIT license.
 
-Install
--------
+## Install
 
 From inside the application's directory, run the following:
 
@@ -15,19 +15,17 @@ pip install -r requirements.txt
 python manage.py migrate
 ```
 
-Usage
------
+## Usage
 
 ```
 python manage.py runserver 127.0.0.1:8000
 ```
 
-Once the server is running you can access it at http://127.0.0.1:8000 (or the machine's address if the machine is remote). API documentation is available at the app's front page or at https://deck-of-cards.goldstar.party.
+Once the server is running you can access it at http://127.0.0.1:8000 (or the machine's address if the machine is remote). API documentation is available at the app's front page or at https://deck-of-cards.breadsticks.org.
 
 The server can be stopped using Ctrl+C.
 
-Docker
-------
+## Docker
 
 ```bash
 docker build -t deckofcards .
